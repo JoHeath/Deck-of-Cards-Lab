@@ -1,0 +1,18 @@
+﻿@model DeckModel
+
+<h2>Click here to draw more cards</h2>
+<form asp-method="post" asp-action="Deck">
+    <input type="submit" />
+</form>
+<h1>Draw results</h1>
+
+@{
+    foreach(Card c in Model.cards)
+    {
+        <img src="@c.images.png"/>
+        <p>@c.value</p>
+        <p>@c.suit</p>
+    }
+
+}
+
